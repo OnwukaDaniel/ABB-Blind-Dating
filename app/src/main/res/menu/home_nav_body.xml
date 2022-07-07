@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_msgs"
+        android:icon="@drawable/two_chats"
+        android:title="Messages" />
+    <item
+        android:id="@+id/nav_fav"
+        android:icon="@drawable/ic_fav"
+        android:title="Favorite" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/person"
+        android:title="Profile" />
+
+</menu>

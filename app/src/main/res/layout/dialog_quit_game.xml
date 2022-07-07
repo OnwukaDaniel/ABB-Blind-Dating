@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AD000000"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="22sp">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:background="@drawable/dialog_quit"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="32sp"
+                android:textSize="26sp"
+                android:textColor="?colorSecondary"
+                android:textStyle="bold"
+                android:text="@string/quit_game"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dialog_negative"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:paddingBottom="16dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_close"
+                app:tint="@color/app_dark1"/>
+
+            <ImageView
+                android:id="@+id/dialog_positive"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:paddingBottom="16dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_check"
+                app:tint="@color/app_dark1"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

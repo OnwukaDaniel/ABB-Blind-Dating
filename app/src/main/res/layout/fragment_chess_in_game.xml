@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="?background"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/chess_in_game_root"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/chess_game_head"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/chess_game_foot"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/chess_game_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginHorizontal="16dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="?iconTint" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/play_chess_with"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/get_more_boards"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/more_boards"/>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:background="?colorSecondary"
+                android:layout_height="30dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardCornerRadius="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="0:00" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="300dp"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="8"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"
+                        android:weightSum="8"
+                        android:baselineAligned="false">
+
+                        <FrameLayout
+                            android:id="@+id/chess_a8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_b8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_c8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_d8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_e8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_f8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_g8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_h8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:layout_height="0dp"
+                        android:weightSum="8">
+
+                        <FrameLayout
+                            android:id="@+id/chess_a7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_b7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_c7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_d7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_e7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_f7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_g7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_h7"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"
+                        android:weightSum="8"
+                        android:baselineAligned="false">
+
+                        <FrameLayout
+                            android:id="@+id/chess_a6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_b6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_c6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_d6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_e6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_f6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_g6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_h6"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:layout_height="0dp"
+                        android:weightSum="8">
+
+                        <FrameLayout
+                            android:id="@+id/chess_a5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_b5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_c5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_d5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_e5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_f5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_g5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_h5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"
+                        android:weightSum="8"
+                        android:baselineAligned="false">
+
+                        <FrameLayout
+                            android:id="@+id/chess_a4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_b4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_c4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_d4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_e4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_f4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_g4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_h4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:layout_height="0dp"
+                        android:weightSum="8">
+
+                        <FrameLayout
+                            android:id="@+id/chess_a3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_b3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_c3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_d3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_e3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_f3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_g3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_h3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"
+                        android:weightSum="8"
+                        android:baselineAligned="false">
+
+                        <FrameLayout
+                            android:id="@+id/chess_a2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_b2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_c2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_d2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_e2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_f2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_g2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_h2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:layout_height="0dp"
+                        android:weightSum="8">
+
+                        <FrameLayout
+                            android:id="@+id/chess_a1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_b1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_c1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_d1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_e1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_f1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_g1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/app_accent"
+                            android:layout_height="50dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/chess_h1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:layout_height="50dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:background="?colorSecondary"
+                android:layout_height="30dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardCornerRadius="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="0:00" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chess_game_foot"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="32sp"
+            android:layout_marginBottom="-32dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/white_s_turn"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/chess_game_quit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="12sp"
+                    android:gravity="end"
+                    app:cardCornerRadius="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="@string/quit"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.AbbBlindDate" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/app_accent</item>
+        <item name="colorPrimaryVariant">@color/app_dark_accent</item>
+        <item name="colorOnPrimary">@color/app_light</item>
+        <item name="android:windowBackground">@color/app_dark_background</item>
+        <item name="iconTint">@color/app_dark_accent</item>
+        <item name="background">@color/app_dark_background</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white50</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorSurface">@color/grey50</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/app_background</item>
+    </style>
+</resources>

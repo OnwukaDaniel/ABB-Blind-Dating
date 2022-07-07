@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.iodaniel.abbblinddating">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AbbBlindDate">
+        <activity
+            android:name=".games.truth_or_dare.ActivityTruthOrDare"
+            android:exported="false" />
+        <activity
+            android:name=".games.tic_tac_toe.ActivityTicTacToe"
+            android:exported="false" />
+        <activity
+            android:name=".games.chess.ActivityChess"
+            android:exported="false" />
+        <activity
+            android:name=".games.ludo.ActivityLudo"
+            android:exported="false" />
+        <activity
+            android:name="com.iodaniel.abbblinddating.ActivityHome"
+            android:exported="false" />
+        <activity
+            android:name=".registration.ActivityLanding"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+
+            <intent-filter android:label="tools activity">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="abbdating.page.link"
+                    android:pathPrefix="/verifyuid"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.iodaniel.abbblinddating.MainActivity"
+            android:theme="@style/Theme.AbbBlindDateSplash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.iodaniel.abbblinddating.chat.ActivityChat" />
+        <activity android:name=".home_fragments.ActivityOtherProfile" />
+        <activity android:name=".games.cards.ActivityCards" />
+    </application>
+
+</manifest>

@@ -1,0 +1,11 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- drawable for selected tab -->
+    <item
+        android:drawable="@drawable/fav_selected_tab"
+        android:state_selected="true"/>
+    <!-- drawable for unselected tab -->
+    <item
+        android:drawable="@drawable/fav_tab_background"
+        android:state_selected="false"/>
+</selector>
+

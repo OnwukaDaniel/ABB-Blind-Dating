@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?background"
+    android:id="@+id/profile2_root"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile2_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_arrow"
+                        android:padding="8dp"
+                        app:tint="?iconTint"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:textColor="@color/app_dark1"
+                    android:layout_gravity="start"
+                    android:text="@string/let_s_set_up_your_profile"
+                    android:textSize="22sp"  />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="0dp"
+                    android:layout_marginHorizontal="22dp"
+                    android:layout_marginVertical="12dp"
+                    android:layout_marginBottom="4dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="18dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/what_is_your_marital_status" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/profile2_single"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/single"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profile2_married"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/married"
+                                android:textSize="12sp"
+                                android:layout_marginHorizontal="8dp"
+                                android:paddingVertical="12dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profile2_divorced"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/divorced"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/profile2_separated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/separated"
+                                android:paddingHorizontal="12dp"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profile2_long"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/long_relationship"
+                                android:textSize="12sp"
+                                android:layout_marginHorizontal="12dp"
+                                android:paddingHorizontal="12dp"
+                                android:paddingVertical="12dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="0dp"
+                    android:layout_marginHorizontal="22dp"
+                    android:layout_marginVertical="12dp"
+                    android:layout_marginBottom="4dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="18dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/what_is_your_body_style" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/profile2_slim"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/slim"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profile2_exercise"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/exercise"
+                                android:textSize="12sp"
+                                android:layout_marginHorizontal="8dp"
+                                android:paddingVertical="12dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profile2_average"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/average"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/profile2_tall"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tall"
+                                android:textSize="12sp"
+                                android:layout_marginHorizontal="8dp"
+                                android:paddingVertical="12dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profile2_attractive"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/attractive"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profile2_stallion"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/stallion_status"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/profile2_dont_say"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/don_t_say"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="22dp"
+                    android:layout_marginVertical="12dp"
+                    android:layout_marginBottom="4dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="18dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/will_you_want_to_date_a_smoker" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/profile2_smoker_yes"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/yes"
+                                android:textSize="12sp"
+                                android:paddingVertical="12dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profile2_smoker_no"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no"
+                                android:textSize="12sp"
+                                android:layout_marginHorizontal="8dp"
+                                android:paddingVertical="12dp"
+                                android:background="@drawable/rounded_unselected"
+                                android:gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile2_continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardMaxElevation="10dp"
+                    android:layout_marginHorizontal="22dp"
+                    android:layout_marginVertical="12dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="?iconTint"
+                    android:layout_gravity="center|center_vertical"
+                    app:cardCornerRadius="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginVertical="12dp"
+                        android:text="@string/next"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

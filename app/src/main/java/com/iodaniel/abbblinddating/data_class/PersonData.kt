@@ -1,0 +1,27 @@
+package com.iodaniel.abbblinddating.data_class
+
+data class PersonData(
+    var name: String = "",
+    var age: String = "",
+    var phone: String = "",
+    var image: String = "",
+    var auth: String = "",
+    var profileImages: ArrayList<Map<String, String>> = arrayListOf(),
+    var location: String = "",
+    var likes: Int = 0,
+    var likesData: ArrayList<String> = arrayListOf(),
+    var interests: ArrayList<String> = arrayListOf(),
+    var photos: ArrayList<String> = arrayListOf(),
+    var language: ArrayList<String> = arrayListOf(),
+    var maritalStatus: String = "",
+    var bodyStyle: String = "",
+    var university: String = "",
+    var highSchool: String = "",
+    var dateSmoker: String = "",
+    var about: String = "",
+    var education: String = "",
+    var emailPasswordPair: Map<String, String> = mapOf(),
+    var birthday: Map<String, Int> = mapOf(),
+    var genderChoice: String = "",
+    var hairColorChoice: String = "",
+)

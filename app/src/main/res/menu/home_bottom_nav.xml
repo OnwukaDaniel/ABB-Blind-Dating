@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/discover"
+        android:icon="@drawable/discover"
+        app:tint="?iconTint"
+        android:title="@string/discover" />
+    <item
+        android:id="@+id/fav"
+        android:icon="@drawable/ic_fav"
+        app:tint="?iconTint"
+        android:title="@string/favorite_display" />
+
+    <item
+        android:id="@+id/update"
+        android:icon="@drawable/fab_plus_image"
+        android:iconTint="@color/app_dark1"
+        app:tint="?iconTint"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/msgs"
+        android:icon="@drawable/two_chats"
+        android:title="@string/messages_display" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/person"
+        app:tint="?iconTint"
+        android:title="@string/profile" />
+</menu>

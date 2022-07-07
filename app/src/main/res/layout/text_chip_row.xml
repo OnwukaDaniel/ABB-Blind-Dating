@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8sp"
+    android:id="@+id/text_chip_card"
+    app:cardCornerRadius="14sp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_chip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?background"
+        android:gravity="center"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="12dp"
+        android:textSize="12sp" />
+
+</androidx.cardview.widget.CardView>

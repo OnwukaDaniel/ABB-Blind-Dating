@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "332468087345",
+    "project_id": "abb-blind-dating",
+    "storage_bucket": "abb-blind-dating.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332468087345:android:33db03a2f0a1d5e15c8310",
+        "android_client_info": {
+          "package_name": "com.iodaniel.abb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332468087345-vh4v8d9m190ia8nnkooed4jed1gp77bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDofR9msvv8kvzpAQZtIym_h_NSnUkbun0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332468087345-vh4v8d9m190ia8nnkooed4jed1gp77bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332468087345:android:90c5bc3eae6784325c8310",
+        "android_client_info": {
+          "package_name": "com.iodaniel.abbblinddating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332468087345-6b3uburskjeiktslnspc62t2a2hb611t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iodaniel.abbblinddating",
+            "certificate_hash": "c45f4a2566efec417cfe0c9f9bb3a67c74c257fe"
+          }
+        },
+        {
+          "client_id": "332468087345-vh4v8d9m190ia8nnkooed4jed1gp77bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDofR9msvv8kvzpAQZtIym_h_NSnUkbun0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332468087345-vh4v8d9m190ia8nnkooed4jed1gp77bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

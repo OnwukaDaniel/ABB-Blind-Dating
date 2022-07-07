@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/landing_root"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="60dp"
+        android:gravity="center|center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="65dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="65dp"
+            android:src="@drawable/splash"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/find_the_best_partner"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:text="@string/join_us_and_socialize_with_millions_of_people"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/landing_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:src="@drawable/ic_arrow"
+            android:rotation="180"
+            app:tint="@color/white"
+            android:backgroundTint="@color/app_accent"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
