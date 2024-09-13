@@ -6,7 +6,7 @@ Features:
 3. Smart couple match field
 4. In-app chat
 5. Notification field
-6. Games and Gift //implemented in next release.
+6. Games and Gift // in next release.
  
 
 
